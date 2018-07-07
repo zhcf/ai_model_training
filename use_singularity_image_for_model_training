@@ -25,7 +25,7 @@ cudnn，这一步可选，如果需要在host上安装caffe，需要安装cudnn�
 # cp include/cudnn.h /usr/local/cuda/include/
 # cp lib64/* /usr/local/cuda/lib64/.
 # ldconfig
-选择CUDA版本时需要注意，Host上的cuda版本和镜像的版本需要一致
+选择CUDA版本时需要注意，Host上的cuda驱动和镜像里面CUDA的版本要兼容
 3.Redhat7.4或者CentOS7.4上安装Singularity
 
 基础镜像
