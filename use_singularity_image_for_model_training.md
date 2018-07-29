@@ -1,4 +1,4 @@
-# 准备Host环境：
+>>> # 准备Host环境：
 **1.安装Redhat 7.4或者CentOS 7.4.**
 
 **2.Redhat7.4或者CentOS7.4上安装cuda**
@@ -31,7 +31,7 @@ cudnn，这一步可选，如果需要在host上安装caffe，需要安装cudnn�
 选择CUDA版本时需要注意，Host上的cuda驱动和镜像里面CUDA的版本要兼容 
 
 **3.Redhat7.4或者CentOS7.4上安装Singularity**
-
+>>>
 # 使用基础镜像 
 
 **1.下载镜像**   
