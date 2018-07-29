@@ -3,6 +3,7 @@ http://singularity.lbl.gov/#home
 https://github.com/singularityware/singularity
 
 1.Linux上安装Singularity：
+```
 #VERSION=2.4.2
 #wget https://github.com/singularityware/singularity/releases/download/$VERSION/singularity-$VERSION.tar.gz
 #tar xvf singularity-$VERSION.tar.gz
@@ -10,6 +11,7 @@ https://github.com/singularityware/singularity
 #./configure --prefix=/usr/local
 #make
 #make install
+```
 
 2.创建 Singularity镜像：
 Singularity没有镜像和实例之分，只有镜像，镜像可以直接运行，镜像是一个只读文件。
