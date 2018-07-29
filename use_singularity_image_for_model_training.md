@@ -29,16 +29,19 @@ cudnn，这一步可选，如果需要在host上安装caffe，需要安装cudnn�
 # ldconfig
 ```
 选择CUDA版本时需要注意，Host上的cuda驱动和镜像里面CUDA的版本要兼容 
+
 **3.Redhat7.4或者CentOS7.4上安装Singularity**
 
-# 基础镜像
-1. 下载镜像  
+# 基础镜像 
+
+**1.下载镜像**  
 https://pan.baidu.com/s/1o8Wxx8I  
 Centos：centos.simg  
 CentOS with VNC：centos_vnc.simg  
 CentOS with VNC with cuda80/cudnn：centos_vnc_cuda80.simg  
 CentOS with VNC with cuda91/cudnn：centos_vnc_cuda91.simg  
-2.使用镜像 
+
+**2. 使用镜像** 
 用户可以使用基础镜像创建新的镜像 
 普通镜像 
 ```
@@ -64,11 +67,12 @@ CentOS with VNC with cuda91/cudnn：centos_vnc_cuda91.simg
 #make
 #./deviceQuery
 ```
-# Caffe镜像：
-1. 下载镜像 
+# Caffe镜像
+**1.下载镜像** 
 https://pan.baidu.com/s/1o8Wxx8I 
 centos_vnc_cuda80_caffe.simg  
-2. 使用镜像 
+
+**2.使用镜像** 
 使用下面的命令，进入镜像，并在镜像内启动vncserver 
 ```
 #singularity build --sandbox centos_vnc_cuda80_caffe centos_vnc_cuda80_caffe.simg
@@ -81,11 +85,12 @@ vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pychar
 caffe安装在镜像的/opt目录下，详细使用见镜像/opt下的readme 
 
 # Caffe2镜像：
-1.下载镜像  
+**1.下载镜像**  
 https://pan.baidu.com/s/1o8Wxx8I 
 centos_vnc_cuda80_caffe2.simg  
 centos_vnc_cuda91_caffe2.simg  
-2.使用镜像 
+
+**2.使用镜像** 
 使用下面的命令，进入镜像，并在镜像内启动vncserver 
 ```
 # singularity build --sandbox centos_vnc_cuda80_caffe2 centos_vnc_cuda80_caffe2.simg
@@ -98,11 +103,12 @@ vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pychar
 caffe2安装在镜像的/opt目录下，详细使用见镜像/opt下的readme   
 
 # Caffe2的物体识别faster r-cnn, mask r-cnn等
-1.下载镜像 
+**1.下载镜像** 
 https://pan.baidu.com/s/1o8Wxx8I 
 centos_vnc_cuda80_caffe2_detectron.simg 
 centos_vnc_cuda91_caffe2_detectron.simg 
-2.使用镜像 
+
+**2.使用镜像** 
 使用下面的命令，进入镜像，并在镜像内启动vncserver 
 ```
 # singularity build --sandbox centos_vnc_cuda80_caffe2_detectron centos_vnc_cuda80_caffe2_detectron.simg
@@ -112,11 +118,12 @@ centos_vnc_cuda91_caffe2_detectron.simg
 vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面，工程就是物体识别的代码 
 caffe2安装在镜像的/opt目录下，详细使用见镜像/opt下的readme 
 
-# TensorFlow镜像：
-1.下载镜像 
+# TensorFlow镜像
+**1.下载镜像** 
 https://pan.baidu.com/s/1o8Wxx8I 
-centos_vnc_cuda80_tensorflow.simg 
-2.使用镜像 
+centos_vnc_cuda80_tensorflow.simg  
+
+**2.使用镜像** 
 使用下面的命令，进入镜像，并在镜像内启动vncserver 
 ```
 # singularity build --sandbox centos_vnc_cuda80_tensorflow centos_vnc_cuda80_tensorflow.simg
