@@ -102,7 +102,7 @@ centos_vnc_cuda91_caffe2.simg
 vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面   
 caffe2安装在镜像的/opt目录下，详细使用见镜像/opt下的readme     
 
-# 使用Caffe2的物体识别faster r-cnn, mask r-cnn等
+# 使用Caffe2的镜像，镜像支持faster r-cnn, mask r-cnn等
 **1.下载镜像**   
 https://pan.baidu.com/s/1o8Wxx8I   
 centos_vnc_cuda80_caffe2_detectron.simg  
