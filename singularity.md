@@ -15,7 +15,7 @@ https://github.com/singularityware/singularity
 
 **2. 创建 Singularity镜像**   
 Singularity没有镜像和实例之分，只有镜像，镜像可以直接运行，镜像是一个只读文件。 下面是3种创建镜像的方式    
-（1）使用bootstrap定义文件创建镜像（bootstrap定义文件类似docker中的dockerfile），下面例子是使用bootstrap文件来创建一个CentOS的镜像:   
+1. 使用bootstrap定义文件创建镜像（bootstrap定义文件类似docker中的dockerfile），下面例子是使用bootstrap文件来创建一个CentOS的镜像:   
 bootstrap文件centos.def
 ```
 BootStrap: yum
@@ -28,12 +28,12 @@ Linux下执行如下命令创建centos镜像，镜像是一个只读的二进制
 #singularity create Centos-7.img
 #singularity bootstrap Centos-7.img centos.def
 ```
-（2）使用docker镜像创建singularity镜像，镜像是一个只读的二进制文件
+2. 使用docker镜像创建singularity镜像，镜像是一个只读的二进制文件
 
 ```
 #singularity build debian1.simg docker://debian:latest
 ```
-（3）对已有镜像进行修改后保存
+3. 对已有镜像进行修改后保存
 ```
 #singularity build --sandbox debian1 debian1.simg
 #singularity shell --writable debian1
@@ -54,19 +54,30 @@ singulariy run debian1 .simg 是运行镜像中的/.singularity.d/runscript
 
 # 为什么选择Singularity而不是Docker
 - Maturity	
-1.Docker is more mature than Singularity, and people are more familiar with docker and creating docker image.
-2.Singularity is just 1-2 years old,  it can convert the docker image to singularity image to use.
+
+1.Docker is more mature than Singularity, and people are more familiar with docker and creating docker image.  
+2.Singularity is just 1-2 years old,  it can convert the docker image to singularity image to use.  
+
 - Performance	
-1.Singularity performance is higher than docker
-- Security
-1.Singularity blocks privilege escalation within the container so if you want to be root inside the container, you first must be root outside the container
-2.Docker instance must be launched by the root user, it has the security issues.
+
+1.Singularity performance is higher than docker   
+
+- Security   
+
+1.Singularity blocks privilege escalation within the container so if you want to be root inside the container, you first must be root outside the container   
+2.Docker instance must be launched by the root user, it has the security issues.   
+
 - Container for running job	
-1.Both Docker and Singularity  support
-- Container for VM usage
+
+1.Both Docker and Singularity  support    
+
+- Container for VM usage   
+
 1.Singularity instance share the same port, same network with host OS, so it can not have the independent ip.   
 2.Docker instance can have the independent ip.   
-- Easy to user	
+
+- Easy to user	 
+
 1.Singularity is more easy than docker, it does not need daemon service running in the host, it just is a library and tool.
 
  
