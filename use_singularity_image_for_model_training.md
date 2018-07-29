@@ -68,11 +68,11 @@ CentOS with VNC with cuda91/cudnn：centos_vnc_cuda91.simg
 #./deviceQuery
 ```
 # Caffe镜像
-**1.下载镜像** 
+**1.下载镜像**  
 https://pan.baidu.com/s/1o8Wxx8I 
 centos_vnc_cuda80_caffe.simg  
 
-**2.使用镜像** 
+**2.使用镜像**  
 使用下面的命令，进入镜像，并在镜像内启动vncserver 
 ```
 #singularity build --sandbox centos_vnc_cuda80_caffe centos_vnc_cuda80_caffe.simg
@@ -86,12 +86,12 @@ caffe安装在镜像的/opt目录下，详细使用见镜像/opt下的readme
 
 # Caffe2镜像：
 **1.下载镜像**  
-https://pan.baidu.com/s/1o8Wxx8I 
-centos_vnc_cuda80_caffe2.simg  
+https://pan.baidu.com/s/1o8Wxx8I  
+centos_vnc_cuda80_caffe2.simg   
 centos_vnc_cuda91_caffe2.simg  
 
-**2.使用镜像** 
-使用下面的命令，进入镜像，并在镜像内启动vncserver 
+**2.使用镜像**  
+使用下面的命令，进入镜像，并在镜像内启动vncserver   
 ```
 # singularity build --sandbox centos_vnc_cuda80_caffe2 centos_vnc_cuda80_caffe2.simg
 # singularity shell --w --nv centos_vnc_cuda80_caffe2
@@ -103,12 +103,12 @@ vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pychar
 caffe2安装在镜像的/opt目录下，详细使用见镜像/opt下的readme   
 
 # Caffe2的物体识别faster r-cnn, mask r-cnn等
-**1.下载镜像** 
-https://pan.baidu.com/s/1o8Wxx8I 
-centos_vnc_cuda80_caffe2_detectron.simg 
-centos_vnc_cuda91_caffe2_detectron.simg 
+**1.下载镜像**   
+https://pan.baidu.com/s/1o8Wxx8I   
+centos_vnc_cuda80_caffe2_detectron.simg  
+centos_vnc_cuda91_caffe2_detectron.simg  
 
-**2.使用镜像** 
+**2.使用镜像**  
 使用下面的命令，进入镜像，并在镜像内启动vncserver 
 ```
 # singularity build --sandbox centos_vnc_cuda80_caffe2_detectron centos_vnc_cuda80_caffe2_detectron.simg
@@ -119,11 +119,11 @@ vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pychar
 caffe2安装在镜像的/opt目录下，详细使用见镜像/opt下的readme 
 
 # TensorFlow镜像
-**1.下载镜像** 
-https://pan.baidu.com/s/1o8Wxx8I 
-centos_vnc_cuda80_tensorflow.simg  
+**1.下载镜像**   
+https://pan.baidu.com/s/1o8Wxx8I  
+centos_vnc_cuda80_tensorflow.simg    
 
-**2.使用镜像** 
+**2.使用镜像**   
 使用下面的命令，进入镜像，并在镜像内启动vncserver 
 ```
 # singularity build --sandbox centos_vnc_cuda80_tensorflow centos_vnc_cuda80_tensorflow.simg
