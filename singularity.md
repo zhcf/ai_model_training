@@ -13,7 +13,7 @@ https://github.com/singularityware/singularity
 #make install
 ```
 
-**2. 创建 Singularity镜像**
+**2. 创建 Singularity镜像**   
 Singularity没有镜像和实例之分，只有镜像，镜像可以直接运行，镜像是一个只读文件。 下面是3种创建镜像的方式    
 （1）使用bootstrap定义文件创建镜像（bootstrap定义文件类似docker中的dockerfile），下面例子是使用bootstrap文件来创建一个CentOS的镜像:   
 bootstrap文件centos.def
@@ -41,7 +41,7 @@ Linux下执行如下命令创建centos镜像，镜像是一个只读的二进制
 ```
 debian1是一个目录，debian1.simg是一个只读的二进制的镜像文件，先对已经存在的进行解压（第一步），然后以可写的方式打开和修改镜像（第二步的命令是进入镜像，然后就可以在镜像里面安装包），修改后保存为另一个镜像文件debian2.simg   
 
-**3. 使用 Singualarity镜像**
+**3. 使用 Singualarity镜像**   
 
 Singularity没有镜像和实例之分，只有镜像，镜像可以直接运行，镜像是一个只读文件。   
 首先，当使用一个镜像的时候，当前用户的home目录会自动映射到镜像中。    
