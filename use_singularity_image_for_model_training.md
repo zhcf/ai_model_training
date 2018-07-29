@@ -34,16 +34,16 @@ cudnn，这一步可选，如果需要在host上安装caffe，需要安装cudnn�
 
 # 基础镜像 
 
-**1.下载镜像**  
+**1.下载镜像**   
 https://pan.baidu.com/s/1o8Wxx8I  
-Centos：centos.simg  
+CentOS：centos.simg  
 CentOS with VNC：centos_vnc.simg  
 CentOS with VNC with cuda80/cudnn：centos_vnc_cuda80.simg  
 CentOS with VNC with cuda91/cudnn：centos_vnc_cuda91.simg  
 
-**2. 使用镜像** 
-用户可以使用基础镜像创建新的镜像 
-普通镜像 
+**2. 使用镜像**  
+用户可以使用基础镜像创建新的镜像  
+普通镜像  
 ```
 # singularity build --sandbox centos centos.simg
 # singularity shell --w centos
@@ -60,7 +60,7 @@ CentOS with VNC with cuda91/cudnn：centos_vnc_cuda91.simg
 # singularity build --sandbox centos_vnc_cuda80 centos_vnc_cuda80.simg
 # singularity shell --w --nv centos_vnc_cuda80
 ```
-如果出现如下的WARNING: Skipping user bind, non existent bind point (file) in container: '/bin/nvidia-smi'，镜像里面使用touch /bin/nvidia-smi创建一个空的/bin/nvidia-smi文件, 然后exit退出镜像，重新登录镜像。 
+如果出现如下的WARNING: Skipping user bind, non existent bind point (file) in container: '/bin/nvidia-smi'，镜像里面使用touch /bin/nvidia-smi创建一个空的/bin/nvidia-smi文件, 然后exit退出镜像，重新登录镜像。   
 如果在运行Caffe或者Caffe2的时候出现error == cudaSuccess. 30 vs 0，这时候需要在host主机上运行devicequery。 
 ```
 #cd /root/NVIDIA_CUDA-8.0_Samples/1_Utilities/deviceQuery
@@ -69,22 +69,22 @@ CentOS with VNC with cuda91/cudnn：centos_vnc_cuda91.simg
 ```
 # Caffe镜像
 **1.下载镜像**  
-https://pan.baidu.com/s/1o8Wxx8I 
+https://pan.baidu.com/s/1o8Wxx8I  
 centos_vnc_cuda80_caffe.simg  
 
 **2.使用镜像**  
-使用下面的命令，进入镜像，并在镜像内启动vncserver 
+使用下面的命令，进入镜像，并在镜像内启动vncserver  
 ```
 #singularity build --sandbox centos_vnc_cuda80_caffe centos_vnc_cuda80_caffe.simg
 #singularity shell --w --nv centos_vnc_cuda80_caffe
 #cd /vncstartup
 #./vnc_startup.sh
 ```
-客户端使用vncviewer访问这个镜像，ip为host主机的ip，端口为5909，密码为vncpasswd  
-vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面  
-caffe安装在镜像的/opt目录下，详细使用见镜像/opt下的readme 
+客户端使用vncviewer访问这个镜像，ip为host主机的ip，端口为5909，密码为vncpasswd   
+vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面   
+caffe安装在镜像的/opt目录下，详细使用见镜像/opt下的readme   
 
-# Caffe2镜像：
+# Caffe2镜像
 **1.下载镜像**  
 https://pan.baidu.com/s/1o8Wxx8I  
 centos_vnc_cuda80_caffe2.simg   
@@ -99,8 +99,8 @@ centos_vnc_cuda91_caffe2.simg
 # ./vnc_startup.sh
 ```
 在客户端使用vncviewer访问这个镜像，ip为host主机的ip，端口为5909，密码为vncpasswd   
-vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面  
-caffe2安装在镜像的/opt目录下，详细使用见镜像/opt下的readme   
+vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面   
+caffe2安装在镜像的/opt目录下，详细使用见镜像/opt下的readme     
 
 # Caffe2的物体识别faster r-cnn, mask r-cnn等
 **1.下载镜像**   
@@ -109,22 +109,22 @@ centos_vnc_cuda80_caffe2_detectron.simg
 centos_vnc_cuda91_caffe2_detectron.simg  
 
 **2.使用镜像**  
-使用下面的命令，进入镜像，并在镜像内启动vncserver 
+使用下面的命令，进入镜像，并在镜像内启动vncserver  
 ```
 # singularity build --sandbox centos_vnc_cuda80_caffe2_detectron centos_vnc_cuda80_caffe2_detectron.simg
 # singularity shell --w --nv centos_vnc_cuda80_caffe2_detectron
 ```
-在客户端使用vncviewer访问这个镜像，ip为host主机的ip，端口为5909，密码为vncpasswd 
-vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面，工程就是物体识别的代码 
-caffe2安装在镜像的/opt目录下，详细使用见镜像/opt下的readme 
+在客户端使用vncviewer访问这个镜像，ip为host主机的ip，端口为5909，密码为vncpasswd    
+vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面，工程就是物体识别的代码    
+caffe2安装在镜像的/opt目录下，详细使用见镜像/opt下的readme    
 
-# TensorFlow镜像
+# TensorFlow镜像  
 **1.下载镜像**   
 https://pan.baidu.com/s/1o8Wxx8I  
 centos_vnc_cuda80_tensorflow.simg    
 
 **2.使用镜像**   
-使用下面的命令，进入镜像，并在镜像内启动vncserver 
+使用下面的命令，进入镜像，并在镜像内启动vncserver  
 ```
 # singularity build --sandbox centos_vnc_cuda80_tensorflow centos_vnc_cuda80_tensorflow.simg
 # singularity shell --w --nv centos_vnc_cuda80_tensorflow
@@ -132,5 +132,5 @@ centos_vnc_cuda80_tensorflow.simg
 # ./vnc_startup.sh
 ```
 在客户端使用vncviewer访问这个镜像，ip为host主机的ip，端口为5909，密码为vncpasswd  
-vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面 
+vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面  
 
