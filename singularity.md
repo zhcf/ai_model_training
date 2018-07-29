@@ -1,3 +1,5 @@
+
+
 # Singulariy 介绍
 http://singularity.lbl.gov/#home  
 https://github.com/singularityware/singularity  
@@ -53,31 +55,7 @@ singulariy run debian1 .simg 是运行镜像中的/.singularity.d/runscript
     
 
 # 为什么选择Singularity而不是Docker
-- Maturity	
 
-1.Docker is more mature than Singularity, and people are more familiar with docker and creating docker image.  
-2.Singularity is just 1-2 years old,  it can convert the docker image to singularity image to use.  
-
-- Performance	
-
-1.Singularity performance is higher than docker   
-
-- Security   
-
-1.Singularity blocks privilege escalation within the container so if you want to be root inside the container, you first must be root outside the container   
-2.Docker instance must be launched by the root user, it has the security issues.   
-
-- Container for running job	
-
-1.Both Docker and Singularity  support    
-
-- Container for VM usage   
-
-1.Singularity instance share the same port, same network with host OS, so it can not have the independent ip.   
-2.Docker instance can have the independent ip.   
-
-- Easy to user	 
-
-1.Singularity is more easy than docker, it does not need daemon service running in the host, it just is a library and tool.
-
- 
+| Maturity   |      Performance      |  Security |  Container for running job |  Container for VM usage |Easy to use|
+|:-------|:-------|:------|:------|:-----|:------|
+| 1.Docker is more mature than Singularity, and people are more familiar with docker and creating docker image.<br>2.Singularity is just 1-2 years old,  it can convert the docker image to singularity image to use.  |  1.Singularity performance is higher than docker  |1.Singularity blocks privilege escalation within the container so if you want to be root inside the container, you first must be root outside the container <br> 2.Docker instance must be launched by the root user, it has the security issues.|1.Both Docker and Singularity  support   | 1.Singularity instance share the same port, same network with host OS, so it can not have the independent ip. <br>2.Docker instance can have the independent ip.   |1.Singularity is more easy than docker, it does not need daemon service running in the host, it just is a library and tool. |
