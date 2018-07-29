@@ -1,4 +1,4 @@
->>> # 准备Host环境：
+# 准备Host环境：
 **1.安装Redhat 7.4或者CentOS 7.4.**
 
 **2.Redhat7.4或者CentOS7.4上安装cuda**
@@ -31,8 +31,10 @@ cudnn，这一步可选，如果需要在host上安装caffe，需要安装cudnn�
 选择CUDA版本时需要注意，Host上的cuda驱动和镜像里面CUDA的版本要兼容 
 
 **3.Redhat7.4或者CentOS7.4上安装Singularity**
->>>
-# 使用基础镜像 
+
+----------
+# 使用镜像
+## 使用基础镜像 
 
 **1.下载镜像**   
 https://pan.baidu.com/s/1o8Wxx8I  
@@ -67,7 +69,7 @@ CentOS with VNC with cuda91/cudnn：centos_vnc_cuda91.simg
 #make
 #./deviceQuery
 ```
-# 使用Caffe镜像
+##  使用Caffe镜像
 **1.下载镜像**  
 https://pan.baidu.com/s/1o8Wxx8I  
 centos_vnc_cuda80_caffe.simg  
@@ -84,7 +86,7 @@ centos_vnc_cuda80_caffe.simg
 vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面   
 caffe安装在镜像的/opt目录下，详细使用见镜像/opt下的readme   
 
-# 使用Caffe2镜像
+##  使用Caffe2镜像
 **1.下载镜像**  
 https://pan.baidu.com/s/1o8Wxx8I  
 centos_vnc_cuda80_caffe2.simg   
@@ -102,7 +104,7 @@ centos_vnc_cuda91_caffe2.simg
 vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面   
 caffe2安装在镜像的/opt目录下，详细使用见镜像/opt下的readme     
 
-# 使用Caffe2的镜像，镜像支持faster r-cnn, mask r-cnn等
+##  使用Caffe2的镜像，镜像支持faster r-cnn, mask r-cnn等
 **1.下载镜像**   
 https://pan.baidu.com/s/1o8Wxx8I   
 centos_vnc_cuda80_caffe2_detectron.simg  
@@ -118,7 +120,7 @@ centos_vnc_cuda91_caffe2_detectron.simg
 vnc登录后， 在vnc桌面上点击pycharm，启动pycharm开发工具, pycharm的工程在/opt/project下面，工程就是物体识别的代码    
 caffe2安装在镜像的/opt目录下，详细使用见镜像/opt下的readme    
 
-# 使用TensorFlow镜像  
+##  使用TensorFlow镜像  
 **1.下载镜像**   
 https://pan.baidu.com/s/1o8Wxx8I  
 centos_vnc_cuda80_tensorflow.simg    
